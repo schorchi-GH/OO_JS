@@ -9,7 +9,7 @@ Veiculo.prototype.displayInfo = function() {
 };
 
 function Carro(marca, modelo, ano, portas) {
-    Veiculo.call(this, marca, modelo, ano); // Chamada equivalente ao `super`
+    Veiculo.call(this, marca, modelo, ano);
     this.portas = portas;
 }
 
@@ -17,12 +17,12 @@ Carro.prototype = Object.create(Veiculo.prototype);
 Carro.prototype.constructor = Carro;
 
 Carro.prototype.displayInfo = function() {
-    Veiculo.prototype.displayInfo.call(this); // Chamada equivalente ao `super.displayInfo()`
+    Veiculo.prototype.displayInfo.call(this);
     console.log(`Portas: ${this.portas}`);
 };
 
 function Moto(marca, modelo, ano, cilindradas) {
-    Veiculo.call(this, marca, modelo, ano); // Chamada equivalente ao `super`
+    Veiculo.call(this, marca, modelo, ano);
     this.cilindradas = cilindradas;
 }
 
@@ -30,7 +30,7 @@ Moto.prototype = Object.create(Veiculo.prototype);
 Moto.prototype.constructor = Moto;
 
 Moto.prototype.displayInfo = function() {
-    Veiculo.prototype.displayInfo.call(this); // Chamada equivalente ao `super.displayInfo()`
+    Veiculo.prototype.displayInfo.call(this);
     console.log(`Cilindradas: ${this.cilindradas}`);
 };
 
